@@ -1,0 +1,18 @@
+public class SportsCar extends Car {
+    private double zeroToSixty; 
+    
+    public SportsCar(String make, String model, int year, Engine engine, double zeroToSixty) {
+        super(make, model, year, engine, 2); 
+        this.zeroToSixty = zeroToSixty;
+    }
+    
+    @Override
+    public void start() {
+        System.out.println();
+        super.start();
+    }
+    
+    public void race() {
+        System.out.println("Racing from 0-60 mph in " + zeroToSixty + " seconds!");
+    }
+}
