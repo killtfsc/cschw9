@@ -1,1 +1,22 @@
-
+public class Car extends Vehicle {
+    private Engine engine;
+    private int numberOfDoors;
+    
+    public Car(String make, String model, int year, Engine engine, int numberOfDoors) {
+        super(make, model, year);
+        this.engine = engine;
+        this.numberOfDoors = numberOfDoors;
+    }
+    
+    @Override
+    public void start() {
+        System.out.println("Car starting");
+        engine.rev();
+    }
+    
+    public void displayCarDetails() {
+        displayInfo();
+        System.out.println("Engine: " + engine.getSpecs());
+        System.out.println("Doors: " + numberOfDoors);
+    }
+}
