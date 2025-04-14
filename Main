@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+        Engine standardEngine = new Engine("V6", 280);
+        Engine sportsEngine = new Engine("V8", 450);
+        Engine electricEngine = new Engine("Electric", 480);
+        
+        Car sedan = new Car("Honda", "Accord", 2025, standardEngine, 4);
+        Car electricCar = new Car("Tesla", "Model X", 2025, electricEngine, 4);
+        SportsCar porsche = new SportsCar("Porsche", "911 GT3 RS", 2025, sportsEngine, 3.2);
+        
+        Vehicle[] vehicles = {sedan, electricCar, porsche};
+        
+        System.out.println("Starting All Vehicles");
+        for (Vehicle vehicle : vehicles) {
+            vehicle.displayInfo();
+            vehicle.start(); 
+            System.out.println();
+        }
+        
+        System.out.println("Car Details");
+        sedan.displayCarDetails();
+        System.out.println();
+        electricCar.displayCarDetails();
+        System.out.println();
+        
+        System.out.println();
+        porsche.displayCarDetails();
+        porsche.race();
+    }
+}
